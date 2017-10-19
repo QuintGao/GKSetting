@@ -133,8 +133,8 @@
 
 - (void)addSettingItem {
     GKSettingItem *item1 = [GKSettingItem itemWithText:@"版本号"];
-    item1.separatorAlignType = GKSettingDetailStyleRight;
-    item1.detailText = @"v3.0.0";
+    item1.detailStyle = GKSettingDetailStyleRight;
+    item1.detailText  = @"v3.0.0";
     
     GKSettingItem *item2 = [GKSettingItem itemWithText:@"版本更新"];
     

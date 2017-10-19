@@ -94,6 +94,7 @@
         [self setupSwitchItem];
     }else {
         self.accessoryView  = nil;
+        self.accessoryType  = UITableViewCellAccessoryNone;
         self.selectionStyle = UITableViewCellSelectionStyleDefault;
     }
 }
@@ -140,7 +141,11 @@
             GKSettingArrowItem *item = (GKSettingArrowItem *)self.settingItem;
             self.detailTextLabel.right = item.hideArrow ? self.width - 15 : self.contentView.right;
         }else {
-            self.detailTextLabel.right = self.contentView.right;
+            if (self.accessoryView == nil || self.accessoryType == UITableViewCellAccessoryNone) {
+                self.detailTextLabel.right = self.contentView.right - 15;
+            }else {
+                self.detailTextLabel.right = self.contentView.right;
+            }
         }
     }else if (self.settingItem.detailStyle == GKSettingDetailStyleBottom) {
         self.textLabel.top          = 2;
@@ -256,6 +261,7 @@
     
     if (item.hideArrow) {
         self.accessoryView = nil;
+        _arrowImageView    = nil;
         self.accessoryType = UITableViewCellAccessoryNone;
     }else {
         if (item.arrowImage) {

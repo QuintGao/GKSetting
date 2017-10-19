@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1293CAA499F504744005DBD4 /* Pods_GKSettingDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA71ACA0EA15E05FCBF12CB4 /* Pods_GKSettingDemo.framework */; };
+		791EB5B71F98A76E00DEA01F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 791EB5B61F98A76E00DEA01F /* README.md */; };
 		79692A871F989F48001AEC5C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79692A861F989F48001AEC5C /* AppDelegate.m */; };
 		79692A8D1F989F48001AEC5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79692A8B1F989F48001AEC5C /* Main.storyboard */; };
 		79692A8F1F989F48001AEC5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79692A8E1F989F48001AEC5C /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		6CAA3C21B8A3F9ECF5CCEB44 /* Pods-GKSettingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GKSettingDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GKSettingDemo/Pods-GKSettingDemo.release.xcconfig"; sourceTree = "<group>"; };
+		791EB5B61F98A76E00DEA01F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		79692A821F989F48001AEC5C /* GKSettingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GKSettingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79692A851F989F48001AEC5C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		79692A861F989F48001AEC5C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -194,8 +196,8 @@
 		79692AB71F989F7F001AEC5C /* GKSetting */ = {
 			isa = PBXGroup;
 			children = (
-				79692ACC1F989F7F001AEC5C /* GKSettingCell.m */,
 				79692AC71F989F7F001AEC5C /* GKSettingCell.h */,
+				79692ACC1F989F7F001AEC5C /* GKSettingCell.m */,
 				79692AB91F989F7F001AEC5C /* GKSettingView.h */,
 				79692ACB1F989F7F001AEC5C /* GKSettingView.m */,
 				79692ABD1F989F7F001AEC5C /* GKSettingGroup.h */,
@@ -242,6 +244,7 @@
 				79692A931F989F48001AEC5C /* Info.plist */,
 				79692A941F989F48001AEC5C /* main.m */,
 				79692AF31F98A0AC001AEC5C /* PrefixHeader.pch */,
+				791EB5B61F98A76E00DEA01F /* README.md */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -261,10 +264,10 @@
 		79692AD81F98A08D001AEC5C /* Test */ = {
 			isa = PBXGroup;
 			children = (
-				79692AD91F98A08D001AEC5C /* GKTool.h */,
-				79692ADA1F98A08D001AEC5C /* GKTestViewController.m */,
-				79692ADB1F98A08D001AEC5C /* GKTool.m */,
 				79692ADC1F98A08D001AEC5C /* GKTestViewController.h */,
+				79692ADA1F98A08D001AEC5C /* GKTestViewController.m */,
+				79692AD91F98A08D001AEC5C /* GKTool.h */,
+				79692ADB1F98A08D001AEC5C /* GKTool.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -272,16 +275,16 @@
 		79692ADD1F98A08D001AEC5C /* WeChat */ = {
 			isa = PBXGroup;
 			children = (
-				79692ADE1F98A08D001AEC5C /* GKSettingViewController.h */,
-				79692ADF1F98A08D001AEC5C /* GKNotifyViewController.h */,
-				79692AE01F98A08D001AEC5C /* GKPersonalViewController.m */,
 				79692AE11F98A08D001AEC5C /* GKBaseSettingViewController.h */,
-				79692AE21F98A08D001AEC5C /* GKWeChatViewController.m */,
-				79692AE31F98A08D001AEC5C /* GKSettingViewController.m */,
-				79692AE41F98A08D001AEC5C /* GKNotifyViewController.m */,
-				79692AE51F98A08D001AEC5C /* GKPersonalViewController.h */,
-				79692AE61F98A08D001AEC5C /* GKWeChatViewController.h */,
 				79692AE71F98A08D001AEC5C /* GKBaseSettingViewController.m */,
+				79692AE21F98A08D001AEC5C /* GKWeChatViewController.m */,
+				79692AE61F98A08D001AEC5C /* GKWeChatViewController.h */,
+				79692AE01F98A08D001AEC5C /* GKPersonalViewController.m */,
+				79692AE51F98A08D001AEC5C /* GKPersonalViewController.h */,
+				79692ADE1F98A08D001AEC5C /* GKSettingViewController.h */,
+				79692AE31F98A08D001AEC5C /* GKSettingViewController.m */,
+				79692ADF1F98A08D001AEC5C /* GKNotifyViewController.h */,
+				79692AE41F98A08D001AEC5C /* GKNotifyViewController.m */,
 			);
 			path = WeChat;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 			files = (
 				79692A921F989F48001AEC5C /* LaunchScreen.storyboard in Resources */,
 				79692A8F1F989F48001AEC5C /* Assets.xcassets in Resources */,
+				791EB5B71F98A76E00DEA01F /* README.md in Resources */,
 				79692A8D1F989F48001AEC5C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

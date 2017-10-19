@@ -21,9 +21,15 @@ GKSetting中包含了以下cell的形式：
 
 ## 效果图
 
-![测试]()
+![test1](https://github.com/QuintGao/GKSetting/blob/master/imgs/test1.png)
 
-![微信]();
+![test2](https://github.com/QuintGao/GKSetting/blob/master/imgs/test2.png)
+
+![me](https://github.com/QuintGao/GKSetting/blob/master/imgs/me.png)
+
+![setting](https://github.com/QuintGao/GKSetting/blob/master/imgs/setting.png)
+
+![notify](https://github.com/QuintGao/GKSetting/blob/master/imgs/notify.png)
 
 
 

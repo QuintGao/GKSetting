@@ -26,19 +26,29 @@
     [self addThirdGroup];
     
     [self addFourGroup];
+    
+    
+    // 可以在别处获取开关对应的值
+    BOOL isNewMsg = [GKSettingTool boolForKey:GKNotifyKey_NewMsg];
+    
+    if (isNewMsg) {
+        NSLog(@"通知开关打开");
+    }else {
+        NSLog(@"通知开关关闭");
+    }
 }
 
 - (void)addFirstGroup {
     GKSettingSwitchItem *newMsgItem = [GKSettingSwitchItem itemWithText:@"接收新消息通知"];
-    newMsgItem.key = @"NewMsg";
+    newMsgItem.key = GKNotifyKey_NewMsg;
     newMsgItem.defaultStatus = YES;
     
     GKSettingSwitchItem *inviteItem = [GKSettingSwitchItem itemWithText:@"接收语音和视频聊天邀请通知"];
-    inviteItem.key = @"invite";
+    inviteItem.key = GKNotifyKey_Invite;
     inviteItem.defaultStatus = YES;
     
     GKSettingSwitchItem * bellsItem = [GKSettingSwitchItem itemWithText:@"视频聊天、语音聊天铃声"];
-    bellsItem.key = @"bells";
+    bellsItem.key = GKNotifyKey_Bells;
     bellsItem.defaultStatus = YES;
     
     GKSettingGroup *group = [GKSettingGroup new];
@@ -51,7 +61,7 @@
 
 - (void)addSecondGroup {
     GKSettingSwitchItem *detailItem = [GKSettingSwitchItem itemWithText:@"通知显示消息详情"];
-    detailItem.key = @"detail";
+    detailItem.key = GKNotifyKey_Detail;
     detailItem.defaultStatus = YES;
     
     GKSettingGroup *group = [GKSettingGroup new];
@@ -73,11 +83,11 @@
 
 - (void)addFourGroup {
     GKSettingSwitchItem *voiceItem = [GKSettingSwitchItem itemWithText:@"声音"];
-    voiceItem.key = @"voice";
+    voiceItem.key = GKNotifyKey_Voice;
     voiceItem.defaultStatus = NO;
     
     GKSettingSwitchItem *vibrateItem = [GKSettingSwitchItem itemWithText:@"振动"];
-    vibrateItem.key = @"vibrate";
+    vibrateItem.key = GKNotifyKey_Vibrate;
     vibrateItem.defaultStatus = YES;
     
     GKSettingGroup *group = [GKSettingGroup new];

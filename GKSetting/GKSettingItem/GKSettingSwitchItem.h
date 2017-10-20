@@ -7,6 +7,7 @@
 //
 
 #import "GKSettingItem.h"
+#import "GKSettingTool.h"
 
 @interface GKSettingSwitchItem : GKSettingItem
 

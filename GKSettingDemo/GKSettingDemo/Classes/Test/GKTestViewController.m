@@ -53,12 +53,12 @@
 
 - (void)addSettingIcon {
     GKSettingIconItem *item1 = [GKSettingIconItem itemWithIcon:@"icon" text:@"用户名"];
-    item1.detailStyle = GKSettingDetailStyleBottom;
-    item1.detailText  = @"用户id：12345";
-    item1.iconCornerRadius = 10;
+    item1.detailStyle        = GKSettingDetailStyleBottom;  // 设置
+    item1.detailText         = @"用户id：12345";
+    item1.iconCornerRadius   = 10;
     item1.separatorAlignType = GKSettingCellSeparatorAlignTypeImage;
-    item1.cellHeight = 100;
-    item1.iconSize = CGSizeMake(80, 80);
+    item1.cellHeight         = 100;
+    item1.iconSize           = CGSizeMake(80, 80);
     
     GKSettingIconItem *item2 = [GKSettingIconItem itemWithIcon:@"icon" text:@"用户名"];
     item2.hideArrow   = YES;

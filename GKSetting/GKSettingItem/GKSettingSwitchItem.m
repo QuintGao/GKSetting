@@ -8,16 +8,14 @@
 
 #import "GKSettingSwitchItem.h"
 
-#define GKUserDefault [NSUserDefaults standardUserDefaults]
-
 @implementation GKSettingSwitchItem
 
 - (void)setOpen:(BOOL)open {
-    [GKUserDefault setBool:open forKey:self.key];
+    [GKSettingTool setBool:open forKey:self.key];
 }
 
 - (BOOL)open {
-    return [GKUserDefault boolForKey:self.key];
+    return [GKSettingTool boolForKey:self.key];
 }
 
 - (void)setDefaultStatus:(BOOL)defaultStatus {
@@ -28,11 +26,11 @@
     
     NSString *isSettingKey = [self.key stringByAppendingString:@"_isSetting"];
     
-    BOOL isSetting = [GKUserDefault boolForKey:isSettingKey];
+    BOOL isSetting = [GKSettingTool boolForKey:isSettingKey];
     if (!isSetting) {
-        [GKUserDefault setBool:YES forKey:isSettingKey];
+        [GKSettingTool setBool:YES forKey:isSettingKey];
         
-        [GKUserDefault setBool:defaultStatus forKey:self.key];
+        [GKSettingTool setBool:defaultStatus forKey:self.key];
     }
 }
 

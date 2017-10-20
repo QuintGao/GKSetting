@@ -32,28 +32,33 @@
     [self addThirdGroup];
     
     [self.settingView reloadData];
+    
+    
 }
 
 - (void)addIconGroup {
+    // 创建iconItem
     GKSettingIconItem *iconItem = [GKSettingIconItem itemWithIcon:@"icon" text:@"用户名"];
-    iconItem.detailStyle      = GKSettingDetailStyleBottom;
+    iconItem.detailStyle      = GKSettingDetailStyleBottom;  // 设置detailTextLabel位置
     iconItem.detailText       = @"微信号：12345";
     iconItem.detailTextFont   = [UIFont systemFontOfSize:13];
     iconItem.detailTextColor  = [UIColor blackColor];
-    iconItem.cellHeight       = 95;
-    iconItem.iconSize         = CGSizeMake(70, 70);
-    iconItem.iconCornerRadius = 5;
-    iconItem.operation = ^{
+    iconItem.cellHeight       = 95; // 设置cell高度
+    iconItem.iconSize         = CGSizeMake(70, 70); // 设置图片尺寸
+    iconItem.iconCornerRadius = 5; // 设置图片圆角
+    iconItem.operation = ^{ // 设置cell点击
         GKPersonalViewController *personalVC = [GKPersonalViewController new];
         personalVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:personalVC animated:YES];
     };
     
+    // 创建group
     GKSettingGroup *iconGroup = [GKSettingGroup new];
     iconGroup.items = @[iconItem];
-    iconGroup.headerHeight = 15;
-    iconGroup.footerHeight = 0;
+    iconGroup.headerHeight = 15;  // 设置sectionHeader高度
+    iconGroup.footerHeight = 0;   // 设置sectionFooter高度
     
+    // 添加到GKSettingView
     [self.settingView.allGroups addObject:iconGroup];
 }
 
